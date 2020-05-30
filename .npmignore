@@ -1,0 +1,8 @@
+/.github/
+/.vscode/
+/dist/tsconfig.tsbuildinfo
+/test/
+/.eslintrc.js
+/.gitignore
+/index.ts
+/tsconfig.json

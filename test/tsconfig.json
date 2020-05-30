@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "inlineSourceMap": true,
+    "lib": ["es2018"],
+    "module": "commonjs",
+    "strict": true,
+    "target": "es2018"
+  },
+  "include": ["*.ts"],
+  "references": [
+    { "path": "../" }
+]
+}

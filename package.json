@@ -1,46 +1,55 @@
 {
-  "name": "watchify",
-  "version": "3.11.1",
-  "description": "watch mode for browserify builds",
-  "main": "index.js",
-  "bin": "bin/cmd.js",
-  "dependencies": {
-    "anymatch": "^2.0.0",
-    "browserify": "^16.1.0",
-    "chokidar": "^2.1.1",
-    "defined": "^1.0.0",
-    "outpipe": "^1.1.0",
-    "through2": "^2.0.0",
-    "xtend": "^4.0.0"
-  },
-  "devDependencies": {
-    "brfs": "^2.0.1",
-    "mkdirp": "~0.5.1",
-    "split": "^1.0.0",
-    "tape": "^4.2.2",
-    "uglify-js": "^2.5.0",
-    "win-spawn": "^2.0.0"
-  },
-  "scripts": {
-    "test": "tape test/*.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/browserify/watchify.git"
-  },
-  "homepage": "https://github.com/browserify/watchify",
+  "name": "watchify-ts",
+  "version": "4.0.0",
+  "description": "watch for browserify builds",
   "keywords": [
+    "watchify",
     "browserify",
-    "browserify-tool",
+    "browserify-plugin",
     "watch",
     "bundle",
     "build",
     "browser"
   ],
-  "author": {
-    "name": "James Halliday",
-    "email": "mail@substack.net",
-    "url": "http://substack.net"
+  "homepage": "https://github.com/Hirse/watchify-ts",
+  "bugs": "https://github.com/Hirse/watchify-ts/issues",
+  "repository": "Hirse/watchify-ts",
+  "license": "MIT",
+  "author": "James Halliday <mail@substack.net> (https://substack.net)",
+  "contributors": [
+    "Renée Kooi <renee@kooi.me> (https://renee.kooi.me)",
+    "Jan Pilzer (https://github.com/Hirse)"
+  ],
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -b test",
+    "lint": "eslint index.ts test/*.ts",
+    "test": "tape test/test-*.js"
   },
-  "license": "MIT"
+  "dependencies": {
+    "chokidar": "3.4.x",
+    "picomatch": "2.2.x",
+    "through2": "3.0.x"
+  },
+  "devDependencies": {
+    "@types/browserify": "12.x.x",
+    "@types/mkdirp": "1.x.x",
+    "@types/picomatch": "2.x.x",
+    "@types/tape": "4.x.x",
+    "@types/through2": "2.x.x",
+    "@typescript-eslint/eslint-plugin": "3.x.x",
+    "@typescript-eslint/parser": "3.x.x",
+    "brfs": "2.x.x",
+    "browserify": "16.x.x",
+    "eslint": "7.x.x",
+    "mkdirp": "1.x.x",
+    "tape": "5.x.x",
+    "typescript": "3.x.x"
+  },
+  "peerDependencies": {
+    "browserify": "16.1.x"
+  },
+  "engines": {
+    "node": "^10.18 || >=12"
+  }
 }
